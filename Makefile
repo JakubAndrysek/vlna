@@ -1,4 +1,5 @@
-test:
+
+test_vlna:
 	python3 -m unittest -v test/test_vlna.py
 
 example_stdout:
