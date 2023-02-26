@@ -1,0 +1,89 @@
+% Text from https://github.com/Pletacka-IoT
+% \documentclass{template/socthesis}
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[czech,shorthands=off]{babel}
+
+% \usepackage[T1]{fontenc} % výstupní kódování
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{hyperref} % reference
+\usepackage{gensymb} % balíček symbolů
+\usepackage{booktabs}
+
+\usepackage[toc,page]{appendix}
+\usepackage{color} % balíček pro obarvování textů
+\usepackage{xcolor}  % zapne možnost používání barev, mj. pro \definecolor
+\definecolor{mygreen}{RGB}{0,150,0} % nastavení barev odkazů
+\usepackage{listings} % balíček pro formátování zdrojových kódů
+\usepackage{multirow}
+\usepackage{pifont}
+\usepackage{pdfpages}
+\usepackage{parskip}
+\usepackage[margin=25mm]{geometry}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage[author=,status=draft]{fixme} % vkládání poznámek
+% dva módy (status): draft (poznámky se zobrazují v~PDF) / final (poznámky se nezobrazují v~PDF)
+
+
+
+\newcommand{\cmark}{\textcolor{green}{\ding{51}}}%
+\newcommand{\xmark}{\textcolor{red}{\ding{55}}}%
+
+\lstset { %
+    language=C++,
+    backgroundcolor=\color{black!5}, % set backgroundcolor
+    basicstyle=\footnotesize,% basic font setting
+}
+
+\setlist[itemize]{parsep=1pt}
+
+\addbibresource{text.bib} % soubor s~bibliografií
+% \nocite{*}
+
+
+% hinty k~používání balíčků hyperref, url, hyperlink a~hypertarget
+% \usepackage{hyperref} % balíček pro hypertextové odkazy
+% \url{www.odkaz.cz}
+% \href{http://www.odkaz.cz}{Text který bude jako odkaz}
+% \hyperlink{label}{proklikávací_text} - odkaz na text
+% \hypertarget{label}{cíl_odkazu} - cíl odkazu
+
+\begin{document} % konec preambule dokumentu
+
+
+\input{titlepage.tex}
+\newpage
+
+% #########################################################################################
+\section*{Abstrakt}
+Tato práce představuje ucelený systém pro automatický monitoring průmyslové výroby a~
+    jeho nasazení do praxe.
+Systém byl navrhován jako univerzální platforma pro monitoring výrobních strojů, s~primárním zaměřením na pletací stroje.
+
+Cílem této práce bylo navrhnout ucelený systém, který dokáže:
+
+\begin{itemize}
+    \item automaticky počítat upletené ponožky
+    \item on-line hlásit poruchu na stroji a~zjišťovat celkovou poruchovost strojů
+    \item porovnávat výkonnost jednotlivých pracovních směn
+    \item monitorovat průběh výroby
+    \item nahradit část monotónní práce operátora
+    \item zrychlit a~zefektivnit výrobu
+    \item snížit chybovost
+\end{itemize}
+
+Systém se skládá ze senzorové části, serveru a~podpůrného serveru.
+Senzorová část je postavená na vlastní senzorové desce s~
+mikrokontrolérem s~barevným displejem. Senzor je připojen k~pletacímu stroji a~odesílá naměřená data.
+Server přijímá  data ze senzorů, zajišťuje jejich zpracování a~následné zobrazení uživateli.
+Podpůrný server se stará o~aktualizaci a~o~kontrolu správného chodu senzorů a~
+tady
+
+asd 9~asd
+
+
+
+\end{document}
