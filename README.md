@@ -21,3 +21,9 @@ Replace file will be saved to `test_output_soc.tex`.
 ```bash
 python3 vlna.py AaIiKkSsVvUuOoZz0123456789 < ./test-data/soc/test.tex > test_output_soc.tex
 ```
+
+## Tests
+Run tests with:
+```bash
+python3 -m unittest -v test/test_vlna.py
+```
