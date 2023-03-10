@@ -14,9 +14,9 @@ def vlna(input_string: str, prefixes: str = "AaIiKkSsVvUuOoZz0123456789") -> str
         return re.sub(regex, subst, input_string, 0, re.MULTILINE)
 
     def change_end_of_line_regex(input_string: str, prefixes: str):
-        # https://regex101.com/r/w86443/3
-        regex = r"\b([" + prefixes + "])[ ]*\n[ ]*^"
-        subst = "\\g<1>~\\n"
+        # https://regex101.com/r/w86443/4
+        regex = r"\b([" + prefixes + "])[ ]*\n[ ]*"
+        subst = "\\g<1>~"
         return re.sub(regex, subst, input_string, 0, re.MULTILINE)
 
     inline_changes = change_inline_regex(input_string, prefixes)

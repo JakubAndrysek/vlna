@@ -19,10 +19,9 @@ class Test(TestCase):
 
     def test_vlna_end_of_line_basic(self):
         input_string = ("chodu senzorů a\n"
-                        " tady")
+                        "tady")
         result = vlna(input_string)
-        self.assertEqual(result, ("chodu senzorů a~\n"
-                                    " tady"))
+        self.assertEqual(result, ("chodu senzorů a~tady"))
 
     def test_vlna_end_of_line_advanced(self):
         input_string = ("chodu senzorů a\n"
@@ -31,11 +30,8 @@ class Test(TestCase):
                         "Kolik je hodin u \n"
                         " nás doma.")
         result = vlna(input_string)
-        self.assertEqual(result, ("chodu senzorů a~\n"
-                                    " tady a~\n"
-                                    "tu jsem.\n"
-                                    "Kolik je hodin u~\n"
-                                    " nás doma."))
+        self.assertEqual(result, ("chodu senzorů a~tady a~tu jsem.\n"
+                                    "Kolik je hodin u~nás doma."))
 
     def vlna_test_folder(self, folder_name: str):
         # remove / from string
